@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    {% feed_meta %}
+    {% seo %}
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <span class="logo-kanji">風</span>
+                    <span class="logo-text">Kazama</span>
+                </a>
+                <p class="tagline">Translations</p>
+            </div>
+            
+            <nav class="nav">
+                <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">
+                    <span class="nav-icon">🏠</span> Inicio
+                </a>
+                <a href="{{ '/proyectos' | relative_url }}" class="nav-link {% if page.url contains 'proyectos' %}active{% endif %}">
+                    <span class="nav-icon">📁</span> Proyectos
+                </a>
+                <a href="{{ '/blog' | relative_url }}" class="nav-link {% if page.url contains 'blog' %}active{% endif %}">
+                    <span class="nav-icon">📝</span> Blog / TL Notes
+                </a>
+                <a href="{{ '/sobre-mi' | relative_url }}" class="nav-link {% if page.url contains 'sobre-mi' %}active{% endif %}">
+                    <span class="nav-icon">👤</span> Sobre Mí
+                </a>
+                <a href="{{ '/contacto' | relative_url }}" class="nav-link {% if page.url contains 'contacto' %}active{% endif %}">
+                    <span class="nav-icon">✉️</span> Contacto
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Twitter">𝕏</a>
+                    <a href="https://github.com/Yamato6" class="social-link" title="GitHub">GH</a>
+                    <a href="#" class="social-link" title="Discord">DC</a>
+                </div>
+                <p class="copyright">© 2025 Kazama TL</p>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            {{ content }}
+        </main>
+    </div>
+    
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

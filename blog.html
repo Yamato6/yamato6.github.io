@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>📝 Blog / TL Notes</h1>
+<p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl);">
+    Notas de traducción, reflexiones y actualizaciones sobre los proyectos.
+</p>
+
+<div class="posts-list">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="post-item">
+        <h3 class="post-item-title">{{ post.title }}</h3>
+        <span class="post-item-date">{{ post.date | date: "%d de %B, %Y" }}</span>
+        {% if post.excerpt %}
+        <p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        {% endif %}
+    </a>
+    {% endfor %}
+    
+    {% if site.posts.size == 0 %}
+    <div class="post-item" style="cursor: default;">
+        <h3 class="post-item-title">Próximamente...</h3>
+        <span class="post-item-date">2025</span>
+        <p class="post-item-excerpt">
+            Aquí encontrarás notas sobre el proceso de traducción, decisiones de localización, 
+            y reflexiones sobre las visual novels que traduzco.
+        </p>
+    </div>
+    {% endif %}
+</div>

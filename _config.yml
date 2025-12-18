@@ -1,0 +1,41 @@
+# Kazama Translations - Jekyll Configuration
+title: Kazama Translations
+description: "Traducción de Visual Novels al Español"
+author: Yamato6
+email: ""
+baseurl: ""
+url: "https://yamato6.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /proyectos/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

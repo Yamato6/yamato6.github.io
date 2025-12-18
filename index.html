@@ -1,0 +1,73 @@
+---
+layout: default
+title: Inicio
+---
+
+<section class="hero">
+    <h1 class="hero-title">
+        <span class="highlight">風</span> Kazama Translations
+    </h1>
+    <p class="hero-subtitle">Traducción de Visual Novels al Español</p>
+</section>
+
+<section class="home-section">
+    <h2 class="section-title">📁 Proyectos Recientes</h2>
+    
+    <div class="projects-grid">
+        {% for project in site.projects limit:3 %}
+        <a href="{{ project.url | relative_url }}" class="project-card">
+            {% if project.image %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-image">
+            {% else %}
+            <div class="project-card-image" style="display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                🎮
+            </div>
+            {% endif %}
+            <div class="project-card-content">
+                <h3 class="project-card-title">{{ project.title }}</h3>
+                <p class="project-card-desc">{{ project.description | truncate: 80 }}</p>
+                {% if project.status %}
+                <span class="status status-{{ project.status | slugify }}">{{ project.status }}</span>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+        
+        {% if site.projects.size == 0 %}
+        <div class="project-card">
+            <div class="project-card-image" style="display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                🎮
+            </div>
+            <div class="project-card-content">
+                <h3 class="project-card-title">Próximamente</h3>
+                <p class="project-card-desc">Los proyectos aparecerán aquí pronto...</p>
+                <span class="status status-planificado">Planificado</span>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="home-section" style="margin-top: var(--spacing-xl);">
+    <h2 class="section-title">📝 Últimas Entradas</h2>
+    
+    <div class="posts-list">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="post-item">
+            <h3 class="post-item-title">{{ post.title }}</h3>
+            <span class="post-item-date">{{ post.date | date: "%d de %B, %Y" }}</span>
+            {% if post.excerpt %}
+            <p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            {% endif %}
+        </a>
+        {% endfor %}
+        
+        {% if site.posts.size == 0 %}
+        <div class="post-item" style="cursor: default;">
+            <h3 class="post-item-title">¡Bienvenidos!</h3>
+            <span class="post-item-date">Diciembre 2025</span>
+            <p class="post-item-excerpt">Las entradas del blog aparecerán aquí. Mantente atento para notas de traducción y actualizaciones.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>

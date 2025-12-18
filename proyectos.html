@@ -1,0 +1,49 @@
+---
+layout: default
+title: Proyectos
+---
+
+<h1>📁 Proyectos</h1>
+<p style="color: var(--text-secondary); margin-bottom: var(--spacing-xl);">
+    Todos los proyectos de traducción, completados y en progreso.
+</p>
+
+<div class="projects-grid">
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
+    <a href="{{ project.url | relative_url }}" class="project-card">
+        {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-image">
+        {% else %}
+        <div class="project-card-image" style="display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 3rem;">
+            🎮
+        </div>
+        {% endif %}
+        <div class="project-card-content">
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-desc">{{ project.description | truncate: 100 }}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--spacing-sm);">
+                {% if project.status %}
+                <span class="status status-{{ project.status | slugify }}">{{ project.status }}</span>
+                {% endif %}
+                {% if project.progress %}
+                <span style="color: var(--text-muted); font-size: 0.85rem;">{{ project.progress }}%</span>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+    
+    {% if site.projects.size == 0 %}
+    <div class="project-card">
+        <div class="project-card-image" style="display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 3rem;">
+            🚀
+        </div>
+        <div class="project-card-content">
+            <h3 class="project-card-title">Próximo Proyecto</h3>
+            <p class="project-card-desc">Estoy trabajando en nuevas traducciones. ¡Pronto habrá novedades!</p>
+            <span class="status status-planificado">Planificado</span>
+        </div>
+    </div>
+    {% endif %}
+</div>
