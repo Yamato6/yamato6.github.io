@@ -1,59 +1,55 @@
-<!-- ...existing code... -->
----
-layout: default
----
-
 <article class="project-page">
-    <header class="project-header">
-        {% if page.image %}
-        <div class="project-banner">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-        </div>
-        {% endif %}
-        
-        <h1 class="project-title">{{ page.title }}</h1>
-        
-        <div class="project-meta">
-            {% if page.status %}
-            <span class="status status-{{ page.status | slugify }}">{{ page.status }}</span>
-            {% endif %}
-            {% if page.developer %}
-            <span class="meta-item"> {{ page.developer }}</span>
-            {% endif %}
-            {% if page.engine %}
-            <span class="meta-item"> {{ page.engine }}</span>
-            {% endif %}
-        </div>
-    </header>
-    
-    {% if page.progress %}
-    <div class="progress-section">
-        <h3>Progreso</h3>
-        <div class="progress-bar">
-            <div class="progress-fill" style="width: {{ page.progress }}%"></div>
-            <span class="progress-text">{{ page.progress }}%</span>
-        </div>
+  <header class="project-header">
+    {% if page.image %}
+    <div class="project-banner">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" />
     </div>
     {% endif %}
-    
-    <div class="project-content">
-        {{ content }}
-    </div>
-    
-    {% if page.download %}
-    <div class="download-section">
-        <a href="{{ page.download }}" class="download-btn">⬇ Descargar Parche</a>
-    </div>
-    {% endif %}
-    
-    <footer class="project-footer">
-        <a href="{{ '/proyectos' | relative_url }}" class="back-link">← Volver a Proyectos</a>
-    </footer>
-</article>
 
-<!-- CommentBox.io Widget -->
-<div class="commentbox"></div>
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>
-    commentBox('5708017131585536-proj'); // Reemplaza YOUR_PROJECT_ID por el ID de tu proyecto en commentbox.io
-</script>
+    <h1 class="project-title">{{ page.title }}</h1>
+
+    <div class="project-meta">
+      {% if page.status %}
+      <span class="status status-{{ page.status | slugify }}"
+        >{{ page.status }}</span
+      >
+      {% endif %} {% if page.developer %}
+      <span class="meta-item"> {{ page.developer }}</span>
+      {% endif %} {% if page.engine %}
+      <span class="meta-item"> {{ page.engine }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.progress %}
+  <div class="progress-section">
+    <h3>Progreso</h3>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: {{ page.progress }}%"></div>
+      <span class="progress-text">{{ page.progress }}%</span>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="project-content">{{ content }}</div>
+
+  {% if page.download %}
+  <div class="download-section">
+    <a href="{{ page.download }}" class="download-btn">⬇ Descargar Parche</a>
+  </div>
+  {% endif %}
+
+  <div class="comments-wrapper">
+    <div id="disqus_thread">
+      <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+      <script>
+        commentBox("5708017131585536-proj");
+      </script>
+    </div>
+  </div>
+  <footer class="project-footer">
+    <a href="{{ '/proyectos' | relative_url }}" class="back-link"
+      >← Volver a Proyectos</a
+    >
+  </footer>
+</article>
