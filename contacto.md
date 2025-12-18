@@ -4,7 +4,7 @@ title: Contacto
 ---
 
 <div class="contact-content">
-    <h1>✉️ Contacto</h1>
+    <h1> Contacto</h1>
     
     <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
         ¿Tienes alguna pregunta, sugerencia, o quieres colaborar en un proyecto? 
@@ -19,21 +19,18 @@ title: Contacto
         </li>
         <li style="margin-bottom: var(--spacing-sm);">
             <strong>Twitter/X:</strong> 
-            <a href="#">@tunombre</a>
+            <a href="#">@KazeKazama1</a>
         </li>
         <li style="margin-bottom: var(--spacing-sm);">
             <strong>Discord:</strong> 
-            <span style="color: var(--text-secondary);">tunombre#0000</span>
+            <span style="color: var(--text-secondary);">kaze061</span>
+        </li>
+        <li style="margin-bottom: var(--spacing-sm);">
+            <strong>Correo Electronico:</strong> 
+            <span style="color: var(--text-secondary);">kazeuma61@gmail.com</span>
         </li>
     </ul>
-    
-    <h2>Colaboraciones</h2>
-    <p>
-        Si eres traductor, editor, o programador y quieres colaborar en algún proyecto, 
-        ¡me encantaría escucharte! Siempre estoy abierto a trabajar con personas 
-        apasionadas por las visual novels.
-    </p>
-    
+ 
     <h2>Reportar Errores</h2>
     <p>
         Si encuentras algún error en las traducciones o los parches, por favor 
