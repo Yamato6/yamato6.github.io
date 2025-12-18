@@ -6,13 +6,13 @@ categories: [noticias]
 
 ¡Hola a todos! 
 
-Bienvenidos a **Kazama Translations**, mi proyecto personal de traducción de visual novels al español.
+Bienvenidos a **Kazama Translations**, mi proyecto personal de traducción de novelas visuales al español.
 
 ## ¿Por qué empecé este proyecto?
 
-Como fan de las visual novels, siempre me ha frustrado la falta de traducciones al español. 
-Hay muchas obras increíbles que nunca llegarán oficialmente a nuestro idioma, así que decidí 
-tomar cartas en el asunto.
+Como fan de las novelas visuales, siempre me ha frustrado la falta de traducciones al español. 
+Hay muchas joyas que nunca han llegado a nuestro idioma, así que decidí usar algo de mi tiempo
+libre para traerlas a ustedes.
 
 ## ¿Qué esperar de este sitio?
 
@@ -22,9 +22,12 @@ tomar cartas en el asunto.
 
 ## Mi primer proyecto
 
-Actualmente estoy trabajando en **Hoshizora no Memoria HD**. Es un proyecto ambicioso, 
-pero estoy determinado a completarlo.
+Actualmente estoy trabajando en **Hoshizora no Memoria HD**. Este no es una traduccion desde 0
+es un port de la traduccion de **Sharin-Sub** que hicieron de la version original.
+
+Creditos: https://sharin-sub.blogspot.com
 
 ¡Gracias por visitar y espero que disfruten las traducciones!
 
-*— Yamato6*
+(Nota: Puede que me desaparezca de vez en cuanto pero tratare de no abandonar el proyecto).
+*— Kaze*
