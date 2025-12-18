@@ -17,10 +17,10 @@ layout: default
             <span class="status status-{{ page.status | slugify }}">{{ page.status }}</span>
             {% endif %}
             {% if page.developer %}
-            <span class="meta-item">🎮 {{ page.developer }}</span>
+            <span class="meta-item"> {{ page.developer }}</span>
             {% endif %}
             {% if page.engine %}
-            <span class="meta-item">⚙️ {{ page.engine }}</span>
+            <span class="meta-item"> {{ page.engine }}</span>
             {% endif %}
         </div>
     </header>
@@ -41,7 +41,7 @@ layout: default
     
     {% if page.download %}
     <div class="download-section">
-        <a href="{{ page.download }}" class="download-btn">⬇️ Descargar Parche</a>
+        <a href="{{ page.download }}" class="download-btn">⬇ Descargar Parche</a>
     </div>
     {% endif %}
     

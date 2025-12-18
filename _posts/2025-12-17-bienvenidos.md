@@ -30,4 +30,4 @@ Creditos: https://sharin-sub.blogspot.com
 ¡Gracias por visitar y espero que disfruten las traducciones!
 
 (Nota: Puede que me desaparezca de vez en cuanto pero tratare de no abandonar el proyecto).
-*— Kaze*
+*— Yamato*

@@ -7,7 +7,7 @@ title: Sobre Mí
     <h1> Sobre Mí</h1>
     
     <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
-        Un gusto, mi nombre en la web es <strong style="color: var(--accent-red-light);">Kaze</strong>, 
+        Un gusto, mi nombre en la web es <strong style="color: var(--accent-red-light);">Yamato</strong>, 
         me gusta bastante leer VNs y otra de mis pasiones es la programación.
     </p>
     
