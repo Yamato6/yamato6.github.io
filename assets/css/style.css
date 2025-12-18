@@ -707,7 +707,7 @@ p {
   }
 }
 
-comments-wrapper {
+.comments-wrapper {
   max-width: var(--content-max);
   margin: var(--spacing-xl) auto 0;
   padding: var(--spacing-md);
